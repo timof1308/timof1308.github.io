@@ -63,7 +63,7 @@
     <div class="content">
         <div class="row">
             <h2 class="title">timof1996</h2>
-            <h6 class="light subtitle">Webpage powered by <b>github.io</b></h6>
+            <h6 class="light subtitle">Webpage powered by <b>github.io</b> to demonstrate repositories</h6>
             <div class="divider">
         </div>
 
@@ -83,7 +83,7 @@
                     </div>
                     <div class="action-bar center">
                         <a href="https://github.com/timof1996/bootstrapValidation" target="_blank" class="btn">ON GIT</a>
-                        <a href="validator" target="_blank" class="btn">LIVE VIEW</a>
+                        <a href="bootstrapValidation" target="_blank" class="btn">LIVE VIEW</a>
                     </div>
                 </div>
             </div>
