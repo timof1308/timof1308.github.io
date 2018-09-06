@@ -64,11 +64,10 @@
         <div class="row">
             <h2 class="title">timof1996</h2>
             <h6 class="light subtitle">Webpage powered by <i>github.io</i> to demonstrate repositories</h6>
-            <div class="divider">
-            </div>
+            <div class="divider"></div>
 
             <div class="row">
-                <div class="col-fluid">
+                <div class="col-6">
                     <div class="card">
                         <div class="card-container">
                             <div class="card-image"
@@ -88,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-fluid">
+                <div class="col-6">
                     <div class="card">
                         <div class="card-container">
                             <div class="card-image"
@@ -121,7 +120,19 @@
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
+    $(document).ready(function () {
+        // Show dropdown when clicked
+        $('#header-btn').on('click', function (e) {
+            $('#header-menu').toggleClass('active');
+            $('.nav-btn').toggleClass('active');
+        });
 
+        // Hide menu after clicking menu item
+        $('.dropdown-menu li').on('click', function (e) {
+            $('#header-menu').removeClass('active');
+            $('.nav-btn').removeClass('active');
+        });
+    })
 </script>
 </body>
 </html>
