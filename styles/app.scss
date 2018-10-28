@@ -1,0 +1,172 @@
+@import "variables";
+
+// Small devices (landscape phones, 575px and down)
+@media (min-width: 575px) {
+  .hidden-s {
+    display: none;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 767px and down)
+@media (min-width: 767px) {
+  .hidden-m {
+    display: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 991px and down)
+@media (max-width: 991px) {
+  .hidden-l {
+    display: none;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1199px and down)
+@media (max-width: 1199px) {
+  .hidden-xl {
+    display: none;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+#splash-img {
+  background-image: url($hero-background-url);
+  .hero-body {
+    background: rgba(0, 0, 0, .4);
+  }
+}
+
+.pageWrapper {
+  padding-top: 60px;
+}
+
+#bs_validation_card .card-image {
+  background-image: url($card-bs-validation-url);
+}
+
+#csv_converter_card .card-image {
+  background-image: url($card-csv-converter-url);
+}
+
+#header {
+  background: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  height: 90px;
+  -webkit-transition: background 0.4s ease, height 0.4s ease;
+  transition: background 0.4s ease, height 0.4s ease;
+  -webkit-transition-duration: 0.4s, 0.4s;
+  transition-duration: 0.4s, 0.4s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+
+  .header-brand {
+    h6 {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  .nav-item {
+    a {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &.header-fill {
+    background-color: rgba(255, 255, 255, 1);
+    height: 50px;
+    box-shadow: 0 3px 15px rgba(57, 63, 72, .1);
+    .header-brand {
+      h6 {
+        color: $text-color;
+      }
+    }
+    .nav-item {
+      a {
+        color: $text-color;
+      }
+      &:hover {
+        a {
+          #twitter-icon {
+            color: $twitter-color !important;
+          }
+          #github-icon {
+            color: $github-color !important;
+          }
+          #linkedin-icon {
+            color: $linkedin-color !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .fa-heart {
+    margin: 0 6px;
+    color: red;
+  }
+}
+
+.pt-1 {
+  padding-top: 10px;
+}
+
+.pt-2 {
+  padding-top: 20px;
+}
+
+.pt-3 {
+  padding-top: 30px;
+}
+
+.pt-4 {
+  padding-top: 40px;
+}
+
+#signin-container {
+  padding: 0;
+  h6 {
+    padding-left: 20px;
+  }
+  #background-container {
+    height: 100vh;
+    background: url($giraffe-background-url);
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .col-fluid {
+    max-width: 375px;
+    width: auto;
+  }
+  form {
+    padding: 10px 20px 20px;
+    label {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.btn-success {
+  background: $success-color;
+}

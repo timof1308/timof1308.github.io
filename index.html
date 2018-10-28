@@ -12,16 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .pageWrapper {
-            padding-top: 60px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/app.css">
 </head>
 
 <body>
 
-<div class="header header-fixed unselectable header-animated">
+<div class="header header-fixed unselectable header-animated" id="header">
     <div class="header-brand">
         <div class="nav-item no-hover">
             <h6 class="title">timof1996</h6>
@@ -34,24 +30,24 @@
     </div>
     <div class="header-nav" id="header-menu">
         <div class="nav-right">
-            <div class="nav-item text-center">
+            <div class="nav-item text-center tooltip tooltip-bottom" data-tooltip="GitHub">
                 <a href="https://github.com/timof1996" target="_blank">
                     <span class="icon">
-                        <i class="fa fa-github" aria-hidden="true"></i>
+                        <i class="fa fa-github" aria-hidden="true" id="github-icon"></i>
                     </span>
                 </a>
             </div>
-            <div class="nav-item text-center">
+            <div class="nav-item text-center tooltip tooltip-bottom" data-tooltip="Twitter">
                 <a href="https://twitter.com/TimoF_1308" target="_blank">
                     <span class="icon">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true" id="twitter-icon"></i>
                     </span>
                 </a>
             </div>
-            <div class="nav-item text-center">
+            <div class="nav-item text-center tooltip tooltip-bottom" data-tooltip="LinedIn">
                 <a href="https://www.linkedin.com/in/timo-fischer-07a587169/" target="_blank">
                     <span class="icon">
-                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin-square" aria-hidden="true" id="linkedin-icon"></i>
                     </span>
                 </a>
             </div>
@@ -59,50 +55,65 @@
     </div>
 </div>
 
+<div id="splash-img" class="hero fullscreen hero-img parallax-img">
+    <div class="hero-body">
+        <div class="content text-center">
+            <h3 class="uppercase white title">timof1996</h3>
+            <h5 class="uppercase white sub-title faded">Showcase & Demonstrations</h5>
+        </div>
+    </div>
+</div>
+
 <div class="pageWrapper">
     <div class="content">
         <div class="row">
-            <h2 class="title">timof1996</h2>
-            <h6 class="light subtitle">Webpage powered by <i>github.io</i> to demonstrate repositories</h6>
+            <h2 class="light subtitle">My Repositories</h2>
             <div class="divider"></div>
 
             <div class="row">
                 <div class="col-6">
-                    <div class="card">
+                    <div class="card" id="bs_validation_card">
                         <div class="card-container">
-                            <div class="card-image"
-                                 style="background-image: url(https://images.unsplash.com/photo-1536008046477-01746710ffb9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=10873349a7093bce26753c49f22be3e8)"></div>
-                            <!--https://source.unsplash.com/random-->
+                            <div class="card-image"></div>
                             <div class="title-container">
-                                <p class="title">Form Validation</p><span class="subtitle">by Timo F</span>
+                                <p class="title">Form Validation</p><span class="subtitle">JavaScript</span>
                             </div>
                         </div>
                         <div class="content">
-                            <p>JavaScript form validation designed for Bootstrap v3.</p>
+                            <p>JavaScript form validation designed for Bootstrap v3. Define custom validation rules and
+                                compare form values to patterns and display your own validation messages.</p>
                         </div>
                         <div class="action-bar center">
-                            <a href="https://github.com/timof1996/bootstrapValidation" target="_blank" class="btn">ON
-                                GIT</a>
-                            <a href="bootstrapValidation" target="_blank" class="btn">LIVE DEMO</a>
+                            <a href="https://github.com/timof1996/bootstrapValidation" target="_blank"
+                               class="btn tooltip" data-tooltip="View Repository on GIT">
+                                ON GIT
+                            </a>
+                            <a href="bootstrapValidation" target="_blank" class="btn tooltip"
+                               data-tooltip="View Live Demonstration">
+                                LIVE DEMO
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="card">
+                    <div class="card" id="csv_converter_card">
                         <div class="card-container">
-                            <div class="card-image"
-                                 style="background-image: url(https://images.unsplash.com/photo-1528631163-b3b387d1b85c?ixlib=rb-0.3.5&s=586bb2cd27ca5ef60929d9a2fc76b20f&auto=format&fit=crop&w=1789&q=80)"></div>
-                            <!--https://source.unsplash.com/random-->
+                            <div class="card-image"></div>
                             <div class="title-container">
-                                <p class="title">CSV Converter</p><span class="subtitle">by Timo F</span>
+                                <p class="title">CSV Converter</p><span class="subtitle">Python</span>
                             </div>
                         </div>
                         <div class="content">
-                            <p>Python v3 script to parse a CSV-file into JSON-file.</p>
+                            <p>Python v3 script to parse a CSV-file into JSON-file. Column headings in your csv-file
+                                will be set used as JSON-keys and each line in csv-file will be displayed as it's own
+                                object.</p>
                         </div>
                         <div class="action-bar center">
-                            <a href="https://github.com/timof1996/CsvToJson" target="_blank" class="btn">ON GIT</a>
-                            <a href="CsvToJson" target="_blank" class="btn">DETAILS</a>
+                            <a href="https://github.com/timof1996/CsvToJson" target="_blank" class="btn tooltip"
+                               data-tooltip="View Repository on GIT">
+                                ON GIT
+                            </a>
+                            <a href="CsvToJson" target="_blank" class="btn tooltip" data-tooltip="Get More Information">DETAILS</a>
                         </div>
                     </div>
                 </div>
@@ -114,25 +125,13 @@
 
 <footer>
     <div class="content">
-        <p class="font-thin center">timof1996 &copy; 2018.</p>
+        <p class="font-thin center">
+            &copy; 2018 - Made with <i class="fa fa-heart pulse" aria-hidden="true"></i> by Timo F.
+        </p>
     </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // Show dropdown when clicked
-        $('#header-btn').on('click', function (e) {
-            $('#header-menu').toggleClass('active');
-            $('.nav-btn').toggleClass('active');
-        });
-
-        // Hide menu after clicking menu item
-        $('.dropdown-menu li').on('click', function (e) {
-            $('#header-menu').removeClass('active');
-            $('.nav-btn').removeClass('active');
-        });
-    })
-</script>
+<script src="js/app.js"></script>
 </body>
 </html>
