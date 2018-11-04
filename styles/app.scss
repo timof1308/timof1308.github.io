@@ -88,6 +88,9 @@
     a {
       color: rgba(255, 255, 255, 1);
     }
+    &:hover {
+      background: transparent;
+    }
   }
 
   &.header-fill {
@@ -104,6 +107,7 @@
         color: $text-color;
       }
       &:hover {
+        background: rgba(50, 50, 50, .05);
         a {
           #twitter-icon {
             color: $twitter-color !important;
