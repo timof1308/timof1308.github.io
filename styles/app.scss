@@ -66,6 +66,10 @@
   background-image: url($card-csv-converter-url);
 }
 
+#tt_card .card-image {
+  background-image: url($card-tt-url);
+}
+
 #header {
   background: transparent;
   -webkit-box-shadow: none;
@@ -147,6 +151,22 @@ footer {
   padding-top: 40px;
 }
 
+.pb-1 {
+  padding-bottom: 10px;
+}
+
+.pb-2 {
+  padding-bottom: 20px;
+}
+
+.pb-3 {
+  padding-bottom: 30px;
+}
+
+.pb-4 {
+  padding-bottom: 40px;
+}
+
 #signin-container {
   padding: 0;
   h6 {
@@ -173,4 +193,76 @@ footer {
 
 .btn-success {
   background: $success-color;
+}
+
+.bg-gradient-red {
+  background: rgb(255, 174, 39);
+  background: -moz-linear-gradient(-45deg, $orange 0%, $red 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $orange), color-stop(100%, $red));
+  background: -webkit-linear-gradient(-45deg, $orange 0%, $red 100%);
+  background: -o-linear-gradient(-45deg, $orange 0%, $red 100%);
+  background: -ms-linear-gradient(-45deg, $orange 0%, $red 100%);
+  background: linear-gradient(135deg, $orange 0%, $red 100%);
+  color: white;
+}
+
+.bg-gradient-purple {
+  background: rgb(222, 73, 109);
+  background: -moz-linear-gradient(-45deg, $red 0%, $purple 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $red), color-stop(100%, $purple));
+  background: -webkit-linear-gradient(-45deg, $red 0%, $purple 100%);
+  background: -o-linear-gradient(-45deg, $red 0%, $purple 100%);
+  background: -ms-linear-gradient(-45deg, $red 0%, $purple 100%);
+  background: linear-gradient(135deg, $red 0%, $purple 100%);
+  color: white;
+}
+
+.bg-gradient-blue {
+  background: rgb(171, 73, 222);
+  background: -moz-linear-gradient(-45deg, $purple 0%, $blue 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $purple), color-stop(100%, $blue));
+  background: -webkit-linear-gradient(-45deg, $purple 0%, $blue 100%);
+  background: -o-linear-gradient(-45deg, $purple 0%, $blue 100%);
+  background: -ms-linear-gradient(-45deg, $purple 0%, $blue 100%);
+  background: linear-gradient(135deg, $purple 0%, $blue 100%);
+  color: white;
+}
+
+.bg-gradient-turquoise {
+  background: rgb(73, 84, 222);
+  background: -moz-linear-gradient(-45deg, $blue 0%, $turquoise 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $blue), color-stop(100%, $turquoise));
+  background: -webkit-linear-gradient(-45deg, $blue 0%, $turquoise 100%);
+  background: -o-linear-gradient(-45deg, $blue 0%, $turquoise 100%);
+  background: -ms-linear-gradient(-45deg, $blue 0%, $turquoise 100%);
+  background: linear-gradient(135deg, $blue 0%, $turquoise 100%);
+  color: white;
+}
+
+.bg-gradient-green {
+  background: rgb(73, 221, 216);
+  background: -moz-linear-gradient(-45deg, $turquoise 0%, $green 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $turquoise), color-stop(100%, $green));
+  background: -webkit-linear-gradient(-45deg, $turquoise 0%, $green 100%);
+  background: -o-linear-gradient(-45deg, $turquoise 0%, $green 100%);
+  background: -ms-linear-gradient(-45deg, $turquoise 0%, $green 100%);
+  background: linear-gradient(135deg, $turquoise 0%, $green 100%);
+  color: white;
+  .text-dark {
+    color: rgba(0, 0, 0, .6);
+  }
+}
+
+.bg-gradient-grey {
+  background: #fdfbfb;
+  background: -moz-linear-gradient(-45deg, $grey-lighter 0%, $grey-light 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $grey-lighter), color-stop(100%, $grey-light));
+  background: -webkit-linear-gradient(-45deg, $grey-lighter 0%, $grey-light 100%);
+  background: -o-linear-gradient(-45deg, $grey-lighter 0%, $grey-light 100%);
+  background: -ms-linear-gradient(-45deg, $grey-lighter 0%, $grey-light 100%);
+  background: linear-gradient(135deg, $grey-lighter 0%, $grey-light 100%);
+}
+
+footer {
+  margin-top: 0;
 }
