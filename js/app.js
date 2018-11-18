@@ -24,4 +24,10 @@ $(document).ready(function () {
             $('#header').not($('.no-transition')).removeClass('header-fill');
         }
     });
+
+    new Text_Transform('#tt_title', {
+        text: 'Text-Transform',
+        chars: "@!§$%&\\/()=?+*#-_<>{}[]",
+        loop: true,
+    })
 });
