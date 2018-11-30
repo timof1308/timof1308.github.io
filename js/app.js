@@ -3,12 +3,16 @@ $(document).ready(function () {
     $('#header-btn').on('click', function (e) {
         $('#header-menu').toggleClass('active');
         $('.nav-btn').toggleClass('active');
+        $('.header-nav').hide();
+        $('.mobile-menu').toggleClass('open');
     });
 
     // Hide menu after clicking menu item
     $('.dropdown-menu li').on('click', function (e) {
         $('#header-menu').removeClass('active');
         $('.nav-btn').removeClass('active');
+        $('.header-nav').show();
+        $('.mobile-menu').toggleClass('open');
     });
 
     if ($(window).scrollTop() >= 120) {

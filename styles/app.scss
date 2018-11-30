@@ -49,6 +49,7 @@
 
 #splash-img {
   background-image: url($hero-background-url);
+
   .hero-body {
     background: rgba(0, 0, 0, .4);
   }
@@ -88,41 +89,60 @@
       color: rgba(255, 255, 255, 1);
     }
   }
+
   .nav-item {
     a {
       color: rgba(255, 255, 255, 1);
     }
+
     &:hover {
       background: transparent;
+    }
+
+    span {
+      background-color: transparent;
     }
   }
 
   &.header-fill {
     background-color: rgba(255, 255, 255, 1);
-    height: 50px;
+    height: 56px;
     box-shadow: 0 3px 15px rgba(57, 63, 72, .1);
+
     .header-brand {
       h6 {
         color: $text-color;
       }
     }
+
     .nav-item {
       a {
         color: $text-color;
       }
+
+      span {
+        background-color: transparent;
+      }
+
       &:hover {
         background: rgba(50, 50, 50, .05);
+
         a {
           #twitter-icon {
             color: $twitter-color !important;
           }
+
           #github-icon {
             color: $github-color !important;
           }
+
           #linkedin-icon {
             color: $linkedin-color !important;
           }
         }
+      }
+      &.no-hover {
+        background: transparent;
       }
     }
   }
@@ -169,24 +189,84 @@ footer {
 
 #signin-container {
   padding: 0;
+
   h6 {
     padding-left: 20px;
   }
+
   #background-container {
     height: 100vh;
     background: url($giraffe-background-url);
     -webkit-background-size: cover;
     background-size: cover;
   }
+
   .col-fluid {
     max-width: 375px;
     width: auto;
   }
+
   form {
     padding: 10px 20px 20px;
+
     label {
       margin-left: 0;
       margin-bottom: 0;
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: white;
+  z-index: 99;
+  -webkit-transition: height .5s ease;
+  -moz-transition: height .5s ease;
+  -ms-transition: height .5s ease;
+  -o-transition: height .5s ease;
+  transition: height .5s ease;
+
+  &.open {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .content {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    a {
+      display: block;
+      font-size: 24px;
+
+      .icon {
+        i {
+          font-size: 24px;
+          margin-top: -6px;
+          margin-left: -18px;
+        }
+      }
+
+      &:after {
+        content: "";
+        width: 100px;
+        height: 10px;
+        background: orange;
+        top: -50%;
+        left: 0;
+        position: relative;
+        display: inline-block;
+      }
     }
   }
 }
@@ -195,7 +275,7 @@ footer {
   background: $success-color;
 }
 
-.bg-gradient-red {
+.bg-gradient-orange {
   background: rgb(255, 174, 39);
   background: -moz-linear-gradient(-45deg, $orange 0%, $red 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $orange), color-stop(100%, $red));
@@ -206,7 +286,7 @@ footer {
   color: white;
 }
 
-.bg-gradient-purple {
+.bg-gradient-rose {
   background: rgb(222, 73, 109);
   background: -moz-linear-gradient(-45deg, $red 0%, $purple 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $red), color-stop(100%, $purple));
@@ -217,7 +297,7 @@ footer {
   color: white;
 }
 
-.bg-gradient-blue {
+.bg-gradient-purple {
   background: rgb(171, 73, 222);
   background: -moz-linear-gradient(-45deg, $purple 0%, $blue 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $purple), color-stop(100%, $blue));
@@ -239,7 +319,7 @@ footer {
   color: white;
 }
 
-.bg-gradient-green {
+.bg-gradient-olive {
   background: rgb(73, 221, 216);
   background: -moz-linear-gradient(-45deg, $turquoise 0%, $green 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $turquoise), color-stop(100%, $green));
@@ -248,9 +328,43 @@ footer {
   background: -ms-linear-gradient(-45deg, $turquoise 0%, $green 100%);
   background: linear-gradient(135deg, $turquoise 0%, $green 100%);
   color: white;
+
   .text-dark {
     color: rgba(0, 0, 0, .6);
   }
+}
+
+.bg-gradient-red {
+  background: $red2;
+  background: -moz-linear-gradient(-45deg, $red3 0%, $red2 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $red3), color-stop(100%, $red2));
+  background: -webkit-linear-gradient(-45deg, $red3 0%, $red2 100%);
+  background: -o-linear-gradient(-45deg, $red3 0%, $red2 100%);
+  background: -ms-linear-gradient(-45deg, $red3 0%, $red2 100%);
+  background: linear-gradient(-45deg, $red3 0%, $red2 100%);
+  color: white;
+}
+
+.bg-gradient-yellow {
+  background: $yellow1;
+  background: -moz-linear-gradient(-45deg, $yellow2 0%, $yellow1 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $yellow2), color-stop(100%, $yellow1));
+  background: -webkit-linear-gradient(-45deg, $yellow2 0%, $yellow1 100%);
+  background: -o-linear-gradient(-45deg, $yellow2 0%, $yellow1 100%);
+  background: -ms-linear-gradient(-45deg, $yellow2 0%, $yellow1 100%);
+  background: linear-gradient(-45deg, $yellow2 0%, $yellow1 100%);
+  color: white;
+}
+
+.bg-gradient-green {
+  background: $green2;
+  background: -moz-linear-gradient(-45deg, $green3 0%, $green2 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $green3), color-stop(100%, $green2));
+  background: -webkit-linear-gradient(-45deg, $green3 0%, $green2 100%);
+  background: -o-linear-gradient(-45deg, $green3 0%, $green2 100%);
+  background: -ms-linear-gradient(-45deg, $green3 0%, $green2 100%);
+  background: linear-gradient(-45deg, $green3 0%, $green2 100%);
+  color: white;
 }
 
 .bg-gradient-grey {
