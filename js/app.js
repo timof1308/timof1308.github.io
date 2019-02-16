@@ -33,5 +33,30 @@ $(document).ready(function () {
         text: 'Text-Transform',
         chars: "@!§$%&\\/()=?+*#-_<>{}[]",
         loop: true,
-    })
+    });
+
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("scroll-indicator").style.width = scrolled + "%";
+
+        $('.timeline .tl-container').each(function (index) {
+            if ($(this).isInViewport()) {
+                let _this = $(this);
+                let animation = (index % 2 === 0) ? 'fade-in-right ease 0.4s forwards' : 'grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards'
+                if (index % 2 !== 0) {
+                    _this.css('transform', 'scaleX(0)');
+                    _this.css('transform-origin', 'left');
+                } else {
+                    _this.css('opacity', '0');
+                }
+                $('.timeline::after').css('z-index', '-10');
+                setTimeout(function () {
+                    _this.css('animation', animation);
+                    _this.css('animation-delay', '0.45s');
+                }, 250);
+            }
+        });
+    }
 });

@@ -11,7 +11,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/app.css">
 </head>
 
@@ -33,21 +34,21 @@
             <div class="nav-item text-center tooltip tooltip-bottom" data-tooltip="GitHub">
                 <a href="https://github.com/timof1308" target="_blank">
                     <span class="icon">
-                        <i class="fa fa-github" aria-hidden="true" id="github-icon"></i>
+                        <i class="fab fa-github" aria-hidden="true" id="github-icon"></i>
                     </span>
                 </a>
             </div>
             <div class="nav-item text-center tooltip tooltip-bottom" data-tooltip="Twitter">
                 <a href="https://twitter.com/TimoF_1308" target="_blank">
                     <span class="icon">
-                        <i class="fa fa-twitter" aria-hidden="true" id="twitter-icon"></i>
+                        <i class="fab fa-twitter" aria-hidden="true" id="twitter-icon"></i>
                     </span>
                 </a>
             </div>
             <div class="nav-item text-center tooltip tooltip-bottom" data-tooltip="LinedIn">
                 <a href="https://www.linkedin.com/in/timo-fischer-07a587169/" target="_blank">
                     <span class="icon">
-                        <i class="fa fa-linkedin-square" aria-hidden="true" id="linkedin-icon"></i>
+                        <i class="fab fa-linkedin" aria-hidden="true" id="linkedin-icon"></i>
                     </span>
                 </a>
             </div>
@@ -79,9 +80,137 @@
 
 <div id="splash-img" class="hero fullscreen hero-img parallax-img" title="Credit: https://unsplash.com/@lucabravo">
     <div class="hero-body">
+
         <div class="content text-center">
-            <h3 class="uppercase white title">timof1308</h3>
-            <h5 class="uppercase white sub-title faded">Showcase & Demonstrations</h5>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="scroll-indicator"></div>
+            </div>
+
+            <h3 class="uppercase white title">Timo Fischer</h3>
+            <h5 class="uppercase white sub-title faded">Homepage & Showcase</h5>
+        </div>
+    </div>
+</div>
+
+<div class="hero pb-1">
+    <div class="content">
+        <div class="row pt-4">
+            <h2 class="light subtitle">About Me</h2>
+            <div class="divider"></div>
+
+            <div class="timeline">
+                <div class="tl-container tl-left">
+                    <div class="tl-content">
+                        <h3>
+                            <span class="fas fa-baby"></span> Aug 1996
+                        </h3>
+                        <p>Born in Frankfurt / Main</p>
+                    </div>
+                </div>
+                <div class="tl-container tl-right">
+                    <div class="tl-content">
+                        <h3>
+                            <span class="fas fa-school"></span> July 2014
+                        </h3>
+                        <p>Graduation from school with high school diploma</p>
+                    </div>
+                </div>
+                <div class="tl-container tl-left">
+                    <div class="tl-content">
+                        <h3>
+                            <span class="fas fa-award"></span> Jan 2017
+                        </h3>
+                        <p>Finished apprenticeship (<a href="https://www.frankfurt-main.ihk.de/english/" target="_blank"
+                                                       class="font-light">IHK Frankfurt</a> ) for "computer science
+                            expert - software development" at <a href="https://www.dimensiondata.com/" target="_blank"
+                                                                 class="font-light">Dimension Data Germany</a></p>
+                    </div>
+                </div>
+                <div class="tl-container tl-right">
+                    <div class="tl-content">
+                        <h3>
+                            <span class="fas fa-laptop"></span> Oct 2017
+                        </h3>
+                        <p>From January 2017 - October 2017: Software developer at Dimension Data Germany</p>
+                    </div>
+                </div>
+                <div class="tl-container tl-left">
+                    <div class="tl-content">
+                        <h3>
+                            <span class="fas fa-graduation-cap"></span> Sep 2020
+                        </h3>
+                        <p>Bachelor of Science - Business Information Systems (Sales & Consulting) at <a
+                                href="http://www.dhbw-mannheim.de/en/faculty-of-business/sales-consulting.html"
+                                target="_blank" class="font-light">Cooperative State University Mannheim</a> in
+                            cooperation with Dimension Data Germany</p>
+                    </div>
+                </div>
+                <div class="tl-container tl-right">
+                    <div class="tl-content">
+                        <h3>
+                            ...
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="subtitle pt-4"><span class="fas fa-check-circle" id="check-icon"></span> My Skills</h4>
+
+            <div class="row fluid-container pb-4" id="skills-section">
+                <div class="level">
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="PHP">
+                            <h1 class="light"><span class="fab fa-php"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="Python">
+                            <h1 class="light"><span class="fab fa-python"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="Java">
+                            <h1 class="light"><span class="fab fa-java"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="HTML">
+                            <h1 class="light"><span class="fab fa-html5"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="CSS & SASS">
+                            <h1 class="light"><span class="fab fa-sass"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="Angular">
+                            <h1 class="light"><span class="fab fa-angular"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="JavaScript & jQuery">
+                            <h1 class="light"><span class="fab fa-js-square"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="MySQL & PostgreSQL databases">
+                            <h1 class="light"><span class="fas fa-database"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="Linux OS">
+                            <h1 class="light"><span class="fab fa-linux"></span></h1>
+                        </div>
+                    </div>
+                    <div class="col-fluid">
+                        <div class="box tooltip tooltip-bottom" data-tooltip="Network configuration with Ansible and APIs">
+                            <h1 class="light"><span class="fas fa-network-wired"></span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -90,7 +219,8 @@
     <div class="content">
         <div class="row">
             <h2 class="light subtitle">My Repositories</h2>
-            <div class="divider"></div>
+            <div class="divider">
+        </div>
 
             <div class="row">
                 <div class="col-4">
@@ -163,8 +293,8 @@
                 </div>
             </div>
 
-        </div>
-    </div>
+</div>
+</div>
 </div>
 
 <div class="hero bg-gradient-grey pb-4" id="color-section">
@@ -322,7 +452,7 @@
                 </div>
 
                 <div class="col-4">
-                    <h6 class="light uppercase white">Other</h6>
+                    <h6 class="light uppercase white">More</h6>
                     <ul class="no-bullets">
                         <a href="https://github.com/Spiderpig86/Cirrus">
                             <li class="list-item">
