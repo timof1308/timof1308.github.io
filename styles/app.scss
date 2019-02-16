@@ -94,6 +94,22 @@
     }
   }
 
+  .nav-center {
+    .nav-item {
+      transform: translateX(-50%);
+      &:hover {
+        background: transparent !important;
+        cursor: default;
+      }
+    }
+  }
+
+  #header-btn {
+    &.active {
+      background: transparent;
+    }
+  }
+
   .nav-item {
     a {
       color: rgba(255, 255, 255, 1);
@@ -105,6 +121,12 @@
 
     span {
       background-color: transparent;
+    }
+
+    &#header-btn {
+      span {
+        background-color: rgba(255, 255, 255, 1);
+      }
     }
   }
 
@@ -126,6 +148,12 @@
 
       span {
         background-color: transparent;
+      }
+
+      &#header-btn {
+        span {
+          background-color: $text-color;
+        }
       }
 
       &:hover {
@@ -157,7 +185,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 200;
+  z-index: 101;
   width: 100%;
   height: 1px;
   background: transparent;
@@ -236,56 +264,61 @@
   }
 }
 
-.mobile-menu {
+.sidebar {
+  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 0;
+  height: 100vh;
   background: white;
-  z-index: 99;
-  -webkit-transition: height .5s ease;
-  -moz-transition: height .5s ease;
-  -ms-transition: height .5s ease;
-  -o-transition: height .5s ease;
-  transition: height .5s ease;
+  font-size: 0.65em;
+  z-index: 99 !important;
 
-  &.open {
-    overflow: hidden;
-    height: 100vh;
-  }
-
-  .content {
+  .nav {
     position: relative;
-    left: 50%;
+    margin: 0 15%;
+    text-align: right;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    font-weight: bold;
 
-    a {
-      display: block;
-      font-size: 24px;
+    ul {
+      list-style: none;
 
-      .icon {
-        i {
-          font-size: 24px;
-          margin-top: -6px;
-          margin-left: -18px;
-        }
-      }
-
-      &:after {
-        content: "";
-        width: 100px;
-        height: 10px;
-        background: orange;
-        top: -50%;
-        left: 0;
+      li {
         position: relative;
-        display: inline-block;
+        margin: 3.2em 0;
+
+        a {
+          line-height: 5em;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 0.4em;
+          color: rgba(0, 0, 0, 0.35);
+          display: block;
+          transition: all ease-out 300ms;
+        }
+
+        &.active a {
+          color: black;
+        }
+
+        &:not(.active)::after {
+          opacity: 0.2;
+        }
+
+        &:not(.active):hover a {
+          color: rgba(0, 0, 0, 0.75);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 0.2em;
+          background: black;
+          left: 0;
+          bottom: 0;
+        }
       }
     }
   }

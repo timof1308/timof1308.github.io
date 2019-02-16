@@ -30,6 +30,15 @@
         </div>
     </div>
     <div class="header-nav" id="header-menu">
+        <div class="nav-left">
+        </div>
+        <div class="nav-center">
+            <div class="nav-item">
+                <a>
+                    <h6 class="light" id="info-text"></h6>
+                </a>
+            </div>
+        </div>
         <div class="nav-right">
             <div class="nav-item text-center tooltip tooltip-bottom" data-tooltip="GitHub">
                 <a href="https://github.com/timof1308" target="_blank">
@@ -56,29 +65,32 @@
     </div>
 </div>
 
-<!--
-<div class="mobile-menu">
-    <div class="content">
-        <a href="https://github.com/timof1308" target="_blank">
-            <span class="icon">
-                <i class="fa fa-github" aria-hidden="true"></i>
-            </span> GitHub
-        </a>
-        <a href="https://twitter.com/TimoF_1308" target="_blank">
-            <span class="icon">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </span> Twitter
-        </a>
-        <a href="https://www.linkedin.com/in/timo-fischer-07a587169/" target="_blank">
-            <span class="icon">
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-            </span> LinkedIn
-        </a>
+<div class="sidebar">
+    <div class="nav">
+        <ul>
+            <li class="active">
+                <a href="/">timof1308</a>
+            </li>
+            <li>
+                <a href="https://github.com/timof1308" target="_blank">
+                    GitHub
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/TimoF_1308" target="_blank">
+                    Twitter
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/timo-fischer-07a587169/" target="_blank">
+                    Linked In
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
--->
 
-<div id="splash-img" class="hero fullscreen hero-img parallax-img" title="Credit: https://unsplash.com/@lucabravo">
+<div id="splash-img" class="hero fullscreen hero-img parallax-img" title="Credit: https://unsplash.com/@lucabravo" data-info="">
     <div class="hero-body">
 
         <div class="content text-center">
@@ -93,7 +105,7 @@
     </div>
 </div>
 
-<div class="hero pb-1">
+<div class="hero pb-1" data-info="About Me">
     <div class="content">
         <div class="row pt-4">
             <h2 class="light subtitle">About Me</h2>
@@ -205,7 +217,8 @@
                         </div>
                     </div>
                     <div class="col-fluid">
-                        <div class="box tooltip tooltip-bottom" data-tooltip="Network configuration with Ansible and APIs">
+                        <div class="box tooltip tooltip-bottom"
+                             data-tooltip="Network configuration with Ansible and APIs">
                             <h1 class="light"><span class="fas fa-network-wired"></span></h1>
                         </div>
                     </div>
@@ -215,12 +228,12 @@
     </div>
 </div>
 
-<div class="pageWrapper pb-4">
+<div class="hero pb-1" data-info="My Repositories">
     <div class="content">
-        <div class="row">
+        <div class="row pt-4">
             <h2 class="light subtitle">My Repositories</h2>
             <div class="divider">
-        </div>
+            </div>
 
             <div class="row">
                 <div class="col-4">
@@ -293,11 +306,11 @@
                 </div>
             </div>
 
-</div>
-</div>
+        </div>
+    </div>
 </div>
 
-<div class="hero bg-gradient-grey pb-4" id="color-section">
+<div class="hero bg-gradient-grey pb-4" id="color-section" data-info="Color Resources">
     <div class="content">
         <div class="row pt-4">
             <h2 class="light subtitle">Color Resources</h2>
