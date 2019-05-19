@@ -67,5 +67,12 @@ $(document).ready(function () {
                 $('#info-text').html(_this.data('info'))
             }
         });
-    }
+    };
+
+    // skills loop
+    setInterval(function(){
+        $('.slider-nav')
+            .eq( ( $('input:checked').index() + 1 ) % 11 )
+            .prop( 'checked', true );
+    },3500);
 });
