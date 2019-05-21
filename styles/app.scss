@@ -661,11 +661,11 @@ footer {
   width: 12px;
   height: 12px;
   margin: 2rem 12px;
-  border-radius: 50%;
+  border-radius: 100%;
   z-index: 10;
   outline: 6px solid #ccc;
   outline-offset: -6px;
-  box-shadow: 0 0 0 0 $comp-red, 0 0 0 0 $comp-red;
+  box-shadow: 0 0 0 2px #ccc, 0 0 0 2px $comp-red;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;

@@ -443,11 +443,11 @@ footer {
   width: 12px;
   height: 12px;
   margin: 2rem 12px;
-  border-radius: 50%;
+  border-radius: 100%;
   z-index: 10;
   outline: 6px solid #ccc;
   outline-offset: -6px;
-  box-shadow: 0 0 0 0 #e90052, 0 0 0 0 #e90052;
+  box-shadow: 0 0 0 2px #ccc, 0 0 0 2px #e90052;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -548,16 +548,16 @@ footer {
 @-webkit-keyframes check {
   50% {
     outline-color: #e90052;
-    box-shadow: 0 0 0 12px #e90052, 0 0 0 27px #e90052; }
+    box-shadow: 0 0 0 8px #e90052, 0 0 0 24px #e90052; }
   100% {
     outline-color: #e90052;
     box-shadow: 0 0 0 0 #e90052, 0 0 0 0 #e90052; } }
 @keyframes check {
   50% {
     outline-color: #e90052;
-    box-shadow: 0 0 0 12px #e90052, 0 0 0 27px #e90052; }
+    box-shadow: 0 0 0 8px #e90052, 0 0 0 24px #e90052; }
   100% {
     outline-color: #e90052;
-    box-shadow: 0 0 0 0 #e90052, 0 0 0 0 #e90052; } }
+    box-shadow: 0 0 0 2px #e90052, 0 0 0 2px #e90052; } }
 
 /*# sourceMappingURL=app.css.map */
