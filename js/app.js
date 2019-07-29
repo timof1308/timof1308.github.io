@@ -14,6 +14,7 @@ $(document).ready(function () {
         }
     });
 
+    // transparent navbar --> fill with page scroll
     if ($(window).scrollTop() >= 120) {
         $('#header').not($('.no-transition')).addClass('header-fill');
     } else {
@@ -28,22 +29,47 @@ $(document).ready(function () {
         }
     });
 
+    // Text Transform Live Demo
     new Text_Transform('#tt_title', {
         text: 'Text-Transform',
         chars: "@!§$%&\\/()=?+*#-_<>{}[]",
         loop: true,
     });
 
+    // on page scroll
     window.onscroll = function () {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
         document.getElementById("scroll-indicator").style.width = scrolled + "%";
 
+        let isMobile = {
+            Android: function () {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function () {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function () {
+                return navigator.userAgent.match(/iPhone|iPod|iPad/i);
+            },
+            Opera: function () {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function () {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function () {
+                return ((isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()));
+            }
+        };
+
+
+        // timeline fade in elements on scroll
         $('.timeline .tl-container').each(function (index) {
-            if ($(this).isInViewport()) {
+            if ($(this).isInViewport() && !isMobile.any()) {
                 let _this = $(this);
-                let animation = (index % 2 === 0) ? 'fade-in-right ease 0.4s forwards' : 'grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards'
+                let animation = (index % 2 === 0) ? 'fade-in-right ease 0.4s forwards' : 'grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards';
                 if (index % 2 !== 0) {
                     _this.css('transform', 'scaleX(0)');
                     _this.css('transform-origin', 'left');
@@ -55,9 +81,14 @@ $(document).ready(function () {
                     _this.css('animation', animation);
                     _this.css('animation-delay', '0.45s');
                 }, 250);
+            } else {
+                // autodisplay
+                let _this = $(this);
+                _this.css('opacity', '1');
             }
         });
 
+        // navbar header info text on scroll
         $('.hero').each(function (index) {
             let currentTop = $(window).scrollTop();
             let elemTop = $(this).offset().top;

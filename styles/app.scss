@@ -301,6 +301,9 @@
           color: rgba(0, 0, 0, 0.35);
           display: block;
           transition: all ease-out 300ms;
+          i {
+            font-size: 1.35em;
+          }
         }
 
         &.active a {
@@ -332,7 +335,9 @@
 footer {
   margin-top: 0;
   background: url($footer-background-url);
-
+  -webkit-background-size: cover;
+  background-size: cover;
+  
   .overlay {
     margin: -6rem 0;
     padding: 6rem 0;
@@ -615,33 +620,8 @@ footer {
   }
 }
 
-#check-icon {
-  color: $success-color;
-}
-
-@keyframes fade-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes grow-left {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
 .slider {
   height: 65vh;
-  min-height: 100%;
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -665,11 +645,11 @@ footer {
   width: 12px;
   height: 12px;
   margin: 2rem 12px;
-  border-radius: 50%;
+  border-radius: 100%;
   z-index: 10;
   outline: 6px solid #ccc;
   outline-offset: -6px;
-  box-shadow: 0 0 0 0 $comp-red, 0 0 0 0 $comp-red;
+  box-shadow: 0 0 0 2px #ccc, 0 0 0 2px #ccc;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -785,24 +765,44 @@ footer {
   max-width: 300px;
 }
 
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 @-webkit-keyframes check {
   50% {
     outline-color: $comp-red;
-    box-shadow: 0 0 0 12px $comp-red, 0 0 0 27px $comp-red;
+    box-shadow: 0 0 0 10px $comp-red, 0 0 0 18px $comp-red;
   }
   100% {
     outline-color: $comp-red;
-    box-shadow: 0 0 0 0 $comp-red, 0 0 0 0 $comp-red;
+    box-shadow: 0 0 0 2px $comp-red, 0 0 0 2px $comp-red;
   }
 }
 
 @keyframes check {
   50% {
     outline-color: $comp-red;
-    box-shadow: 0 0 0 12px $comp-red, 0 0 0 27px $comp-red;
+    box-shadow: 0 0 0 10px $comp-red, 0 0 0 18px $comp-red;
   }
   100% {
     outline-color: $comp-red;
-    box-shadow: 0 0 0 0 $comp-red, 0 0 0 0 $comp-red;
+    box-shadow: 0 0 0 2px $comp-red, 0 0 0 2px $comp-red;
   }
 }
