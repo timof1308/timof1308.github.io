@@ -101,9 +101,23 @@ $(document).ready(function () {
     };
 
     // skills loop
-    setInterval(function(){
+    var slider_nav_loop;
+    slider_nav_loop = setInterval(skill_nav_loop,4000);
+
+    // stop loop on click
+    $('.slider-nav').on('click', function () {
+        clearInterval(slider_nav_loop);
+
+        // start loop again after 7,5s
+        setTimeout(function () {
+            slider_nav_loop = setInterval(skill_nav_loop, 4000);
+        }, 7500)
+    });
+
+    // select next input
+    function skill_nav_loop() {
         $('.slider-nav')
-            .eq( ( $('input:checked').index() + 1 ) % 11 )
+            .eq( ( $('input:checked').index() + 1 ) % 12 )
             .prop( 'checked', true );
-    },3500);
+    }
 });
