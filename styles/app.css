@@ -44,7 +44,7 @@
   #header .header-brand h6 {
     color: white; }
   #header .nav-center .nav-item {
-    transform: translateX(-50%); }
+    transform: translateX(-40%); }
     #header .nav-center .nav-item:hover {
       background: transparent !important;
       cursor: default; }
