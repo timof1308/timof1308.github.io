@@ -711,11 +711,15 @@ footer {
   left: -1100%;
 }
 
+.slider-nav:checked:nth-of-type(12) ~ .slider-container {
+  left: -1200%;
+}
+
 .slider-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1200%;
+  width: 1300%;
   height: 100%;
   -webkit-transition: left 0.4s;
   transition: left 0.4s;
