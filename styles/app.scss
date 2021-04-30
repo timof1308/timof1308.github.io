@@ -49,9 +49,12 @@
 
 #splash-img {
   background-image: url($hero-background-url);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 
   .hero-body {
-    background: rgba(0, 0, 0, .35);
+    background: rgba(0, 0, 0, .55);
   }
 }
 
@@ -512,8 +515,8 @@ footer {
       width: 25px;
       height: 25px;
       right: -17px;
-      background-color: $comp-green;
-      border: 4px solid $comp-purple;
+      background-color: $comp-yellow;
+      border: 4px solid $comp-yellow;
       top: 15px;
       border-radius: 50%;
       z-index: 1;
@@ -526,6 +529,10 @@ footer {
     position: relative;
     border-radius: 6px;
     color: $comp-purple;
+
+    .fas:before {
+      color: $comp-yellow;
+    }
 
     a {
       color: $comp-purple;
