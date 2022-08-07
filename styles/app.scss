@@ -527,9 +527,9 @@ footer {
       position: absolute;
       width: 25px;
       height: 25px;
-      right: -17px;
-      background-color: $comp-yellow;
-      border: 4px solid $comp-yellow;
+      right: -12px;
+      background-color: $comp-complementaire;
+      border: 4px solid $comp-complementaire;
       top: 15px;
       border-radius: 50%;
       z-index: 1;
@@ -538,13 +538,13 @@ footer {
 
   .tl-content {
     padding: 20px 30px;
-    background-color: $comp-green;
+    background-color: $comp-background;
     position: relative;
     border-radius: 6px;
     color: $comp-purple;
 
     .fas:before {
-      color: $comp-yellow;
+      color: $comp-complementaire;
     }
 
     a {
@@ -565,9 +565,9 @@ footer {
       width: 0;
       z-index: 1;
       right: 30px;
-      border: medium solid $comp-green;
+      border: medium solid $comp-background;
       border-width: 10px 0 10px 10px;
-      border-color: transparent transparent transparent $comp-green;
+      border-color: transparent transparent transparent $comp-background;
     }
   }
 
@@ -582,13 +582,13 @@ footer {
       width: 0;
       z-index: 1;
       left: 30px;
-      border: medium solid $comp-green;
+      border: medium solid $comp-background;
       border-width: 10px 10px 10px 0;
-      border-color: transparent $comp-green transparent transparent;
+      border-color: transparent $comp-background transparent transparent;
     }
 
     &::after {
-      left: -16px;
+      left: -12px;
     }
   }
 
@@ -610,9 +610,9 @@ footer {
 
       &::before {
         left: 60px;
-        border: medium solid $comp-green;
+        border: medium solid $comp-background;
         border-width: 10px 10px 10px 0;
-        border-color: transparent $comp-green transparent transparent;
+        border-color: transparent $comp-background transparent transparent;
       }
     }
 
